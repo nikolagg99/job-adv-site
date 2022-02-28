@@ -1,0 +1,19 @@
+<h1>My Advertisements</h1>
+
+<div *ngIf="errorMesage">
+    {{errorMesage}}
+</div>
+
+<!-- Alert message when a company has no ads -->
+<div class="alert-no-ads" *ngIf="!advertisements">
+    <h1>You haven't added any advertisements yet</h1>
+</div>
+
+<!-- Container with the ads of the company(When there are ads) -->
+<div class="advertisements-container" *ngIf="advertisements">
+    <app-single-advertisement
+        *ngFor="let advertisement of advertisements"
+        [advertisement]="advertisement"
+        (deleteChange)="reloadOnDelete()"
+    ></app-single-advertisement>
+</div>

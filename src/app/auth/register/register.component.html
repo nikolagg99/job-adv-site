@@ -1,0 +1,58 @@
+<div class="register-container">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="register-form">
+        <h1><u>Register</u></h1>
+        <div class="register-item">
+            <label for="name">Name</label>
+            <input type="text" id="name" formControlName="name">
+
+            <!-- Required error message -->
+            <small *ngIf="nameFormControl?.touched && nameFormControl?.invalid && nameFormControl.hasError('required')">
+                This field is required!!!
+            </small>
+        </div>
+
+
+        <div class="register-item">
+            <label for="email">Email</label>
+            <input type="email" id="email" formControlName="email">
+
+            <!-- Required error message -->
+            <small
+                *ngIf="emailFormControl?.touched && emailFormControl?.invalid && emailFormControl.hasError('required')">
+                This field is required!!!
+            </small>
+            <!-- Invalid email error message -->
+            <small *ngIf="emailFormControl?.touched && emailFormControl?.invalid && emailFormControl.hasError('email')">
+                Please enter valid email address!!!
+            </small>
+        </div>
+
+
+        <div class="register-item">
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password">
+
+            <!-- Required error message -->
+            <small *ngIf="passFormControl?.touched && passFormControl?.invalid && passFormControl.hasError('required')">
+                This field is required!!!
+            </small>
+            <!-- Minimum length error message -->
+            <small
+                *ngIf="passFormControl?.touched && passFormControl?.invalid && passFormControl.hasError('minlength')">
+                Password must contain minimum {{passFormControl.errors?.['minlength'].requiredLength}} characters!!!
+            </small>
+        </div>
+
+
+        <div class="register-item">
+            <label>Role: </label>
+            <select id="power" name="role" formControlName="role">
+                <option *ngFor="let role of roles" [value]="role"> {{role}}</option>
+            </select>
+        </div>
+
+        <div class="register-item btn-container">
+            <button>Register</button>
+        </div>
+    </form>
+</div>

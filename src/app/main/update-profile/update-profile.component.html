@@ -1,0 +1,20 @@
+<div class="update-profile-container">
+    <form [formGroup]="formGroup" class="update-form">
+        <h2><u>Update profile</u></h2>
+        <div class="update-item">
+            <label for="name">Name: </label>
+            <input type="text" id="name" formControlName="name">
+        </div>
+
+
+        <div class="update-item">
+            <label for="email">Email: </label>
+            <input type="email" id="email" formControlName="email">
+        </div>
+
+        <div class="update-item btn-container">
+            <button (click)="onUpdate()">Update</button>
+            <button (click)="onDelete()">Delete profile</button>
+        </div>
+    </form>
+</div>

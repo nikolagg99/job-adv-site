@@ -1,0 +1,10 @@
+<h1>All Candidates for your advertisements</h1>
+
+<div class="candidates-container">
+    <div *ngFor="let application of applications">
+        <app-single-candidate *ngIf="application.company_name === companyName" [application]="application"
+            (approveUpdate)="update()">
+        </app-single-candidate>
+
+    </div>
+</div>

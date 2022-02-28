@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+    color: rgb(9, 126, 87);
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+  }
+  
+  td, th {
+    border: 2px solid #cccc;
+    text-align: left;
+    padding: 8px;
+    color: rgb(9, 126, 87);
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  th {
+    text-align: center;
+    background-color: rgb(45, 201, 149);;
+    color: rgb(9, 126, 87);
+    font-weight: bold;
+    font-style: italic;
+  }

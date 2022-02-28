@@ -1,0 +1,95 @@
+.advertisement {
+    height: 40vh;
+    border: 3px solid rgb(45, 201, 149);
+    background-color: rgb(227, 245, 239);
+    color: rgb(9, 126, 87);
+    border-radius: 10px;
+    overflow-y: auto;
+    margin: 1vh;
+    padding: 1vh;
+    width: 40vh;
+    position: relative;
+}
+
+.adv-head {
+    text-align: center;
+    height: 15vh;
+}
+
+.adv-content {
+    height: 15vh;
+    overflow-y: auto;
+    border-top: 1px solid rgb(45, 201, 149);
+    border-bottom: 1px solid rgb(45, 201, 149);
+}
+
+.like-container {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+}
+
+.like-button {
+    width: 30%;
+    margin: 5%;
+    background-color: rgb(45, 201, 149);
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.like-button:hover {
+    cursor: pointer;
+    background-color: rgb(111, 218, 182);
+    color: rgb(33, 138, 103);
+}
+
+.like-counter {
+    float: right;
+}
+ 
+.apply-button {
+    background-color: rgb(45, 201, 149);
+    color: aliceblue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2%;
+    border-radius: 50%;
+    padding: 4%;
+}
+
+.apply-button:hover {
+    cursor: pointer;
+    background-color: rgb(111, 218, 182);
+    color: rgb(33, 138, 103);
+}
+
+.delete-btn, .update-btn {
+    background-color: rgb(45, 201, 149);
+    width: 27%;
+    font-weight: bold;
+    color: aliceblue;
+    margin: 5%;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.update-btn:hover, .delete-btn:hover {
+    cursor: pointer;
+    background-color: rgb(111, 218, 182);
+    color: rgb(33, 138, 103);;
+}
+
+// Media queries
+@media only screen and (max-width: 980px) {
+    .advertisement {
+        width: 50vh;
+    }
+}
+
+// Media queries
+@media only screen and (max-width: 800px) {
+    .advertisement {
+        width: 60vh;
+    }
+}

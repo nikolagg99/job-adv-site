@@ -1,0 +1,136 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    width: 40%;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 20px;
+    border: 3px solid rgb(9, 126, 87);
+    background-color: rgb(227, 245, 239);
+
+    h1 {
+        text-align: center;
+        margin-bottom: 3%;
+        color: rgb(9, 126, 87);
+    }
+}
+
+.login-item {
+    margin: 3%;
+    padding: 3%;
+    label {
+        width: 50%;
+        color: rgb(9, 126, 87);
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    input {
+        width: 70%;
+        float: right;
+        padding: 1%;
+        border-radius: 10px;
+        border: 2px solid rgb(9, 126, 87);
+        color: rgb(33, 138, 103);
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    button {
+        width: 40%;
+        padding: 1%;
+        border-radius: 10px;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        background-color: rgb(45, 201, 149);
+        border: 2px solid rgb(33, 138, 103);;;
+        color: aliceblue;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: rgb(111, 218, 182);
+        color: rgb(33, 138, 103);;
+    }
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-alert-container {
+    display: flex;
+    justify-content: center;
+    .register-alert {
+        a {
+            color: rgb(4, 59, 41);
+        }
+        a:hover {
+            color: rgb(77, 165, 136);
+        }
+    }
+}
+
+.register-alert {
+    text-align: center;   
+    color: rgb(9, 126, 87);
+    font-size: 1.2rem;
+}
+
+.email-alert-message {
+    padding-top: 1%;
+    color: red;
+    float: right;
+    width: 54%;
+    font-weight: bold;
+}
+
+.erro-submit {
+    color: red;
+    font-weight: bold;
+}
+
+.validation-message-container {
+    display: flex;
+    justify-content: center;
+}
+
+// Media queries
+@media only screen and (max-width: 1150px) {
+    .login-form {
+        width: 50%;
+    }
+    input {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .login-form {
+        width: 60%;
+    }
+
+    input {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .login-form {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .login-form {
+        width: 90%;
+    }
+}

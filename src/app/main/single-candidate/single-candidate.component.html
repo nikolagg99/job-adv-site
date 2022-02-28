@@ -1,0 +1,18 @@
+<div class="candidate-container">
+    <div class="candidate-item right-border">
+        <div><u>Advertisement</u>:</div>
+        <div>{{application.advertisement_title}}</div>
+    </div>
+
+    <div class="candidate-item right-border">
+        <div><u>User E-mail:</u></div> 
+        <div>{{application.user_email}}</div>
+    </div>
+
+    <div class="candidate-item">
+        <div><u>Is Approved:</u></div> 
+        <div>{{application.isApproved ? 'Yes' : 'No'}}</div>
+        <button class="approve-btn" (click)="onApprove(application._id)">{{application.isApproved ? 'Remove' :'Approve' }}</button>
+    </div>
+
+</div>

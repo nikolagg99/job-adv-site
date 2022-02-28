@@ -1,0 +1,31 @@
+<div class="advertisement">
+    <div class="adv-head">
+        <h3>{{advertisement.title}}</h3>
+        <h5><b>Category: </b> {{advertisement.category}} </h5>
+        <h5><b>Type: </b> {{advertisement.type}} </h5>
+    </div>
+
+    <div class="adv-content">
+        <p>
+            {{advertisement.content}}
+        </p>
+    </div>
+
+    <!-- Application button(only for users) -->
+    <button class="apply-button" (click)="applyJob(advertisement.title)" *ngIf="userRole === 'user'">
+        Apply
+    </button>
+
+    <div class="like-container">
+        <!-- Button for update and button for delete add -->
+        <button class="delete-btn" *ngIf="userRole === 'company'" (click)="deleteAdv(advertisement._id)">Delete</button>
+        <button class="update-btn" *ngIf="userRole === 'company'"  [routerLink]="['/advertisement','update', advertisement._id]">Update</button>
+
+        <!-- Like button(only for users) -->
+        <button class="like-button" *ngIf="userRole === 'user'" (click)="likeAdvertisement(advertisement._id)">
+            Like
+        </button>
+        <p class="like-counter"><b><u>Likes: {{advertisement.likes}}</u></b></p>
+    </div>
+
+</div>

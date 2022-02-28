@@ -1,0 +1,37 @@
+<div class="login-container">
+    <form [formGroup]="formGroup" class="login-form" (ngSubmit)="onSubmit()">
+        <h1><u>Login</u></h1>
+        <div class="login-item">
+            <label for="email">Email:</label>
+            <input type="email" id="email" formControlName="email">
+
+            <!-- Email validation -->
+            <small *ngIf="emailFormControl.touched && emailFormControl.invalid && emailFormControl.hasError('email')"
+                class="email-alert-message">
+                Please enter valid E-mail format!!!
+            </small>
+        </div>
+
+        <div class="login-item">
+            <label for="password">Password:</label>
+            <input type="password" id="password" formControlName="password">
+        </div>
+
+        <div class="validation-message-container">
+            <!-- Required validation -->
+            <p *ngIf="passFormControl.touched && passFormControl.invalid && passFormControl.hasError('required')"
+                class="erro-submit">
+                Please enter valid e-mail or password!!!
+            </p><br>
+        </div><br>
+
+        <div class="login-alert-container">
+            <small class="register-alert">You don't have an account yet? <a
+                    routerLink="/auth/register">Register</a></small>
+        </div>
+
+        <div class="login-item btn-container">
+            <button>Login</button>
+        </div>
+    </form>
+</div>

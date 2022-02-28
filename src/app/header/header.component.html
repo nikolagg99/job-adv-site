@@ -1,0 +1,21 @@
+<div class="topnav">
+    <h3 class="active" *ngIf="!isLogged">IT Jobs</h3>
+    <!-- For users and companies -->
+    <a class="active" routerLink="advertisements" *ngIf="isLogged">Advertisements</a>
+
+    <!-- Only for companies -->
+    <a class="active" routerLink="advertisement/create" *ngIf="userRole === 'company'">Create advertisement</a>
+    <a class="active" routerLink="my-advertisements" *ngIf="userRole === 'company'">My Advertisements</a>
+    <a class="active" routerLink="candidates" *ngIf="userRole === 'company'">Candidates</a>
+    
+     <!-- For users and companies -->
+    <a class="active" [routerLink]="['update', userID]" *ngIf="isLogged">My Account</a>
+
+    <!-- For users -->
+    <a class="active" routerLink="my-applications" *ngIf="userRole === 'user'">My Applications</a>
+
+    <!-- for every role -->
+    <a (click)="logout()" class="logout-btn" *ngIf="isLogged">Logout</a>
+    <a routerLink="login" class="login-btn" *ngIf="!isLogged">Login</a>
+    <a routerLink="auth/register" class="login-btn" *ngIf="!isLogged">Register</a>
+  </div>

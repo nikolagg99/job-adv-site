@@ -1,0 +1,15 @@
+<h1><u>Your Applications</u></h1>
+<table>
+    <tr>
+        <th>Advertisement Title</th>
+        <th>Company Name</th>
+        <th>Your E-mail</th>
+        <th>Are you approved</th>
+    </tr>
+    <tr *ngFor="let application of applications">
+        <td>{{application.advertisement_title}}</td>
+        <td>{{application.company_name}}</td>
+        <td>{{application.user_email}}</td>
+        <td>{{application.isApproved ? 'Yes' : 'No'}}</td>
+    </tr>
+</table>

@@ -1,0 +1,72 @@
+.add-advertisement-form {
+    width: 50%;
+    margin: auto;
+    border: 3px solid rgb(45, 201, 149);
+    background-color: rgb(227, 245, 239);
+    margin-top: 3%;
+    padding: 3%;
+    border-radius: 20px;
+    margin-bottom: 10%;
+
+    h2 {
+        text-align: center;
+        color: rgb(9, 126, 87);
+        font-size: 2rem;
+    }
+
+    .label-and-input {
+        padding: 3%;
+    }
+
+    .form-items {
+        padding-bottom: 2%;
+
+        label {
+            width: 100%;
+            margin: 5%;
+            font-size: 1.5rem;
+            color: rgb(9, 126, 87);
+        }
+
+        input, textarea, select {
+            width: 50%;
+            float: right;
+            margin-right: 5%;
+            padding: 1%;
+            border-radius: 10px;
+            color: rgb(9, 126, 87);
+            border: 1px solid rgb(9, 126, 87);
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+
+    small {
+        color: red;
+        font-weight: bold;
+        float: right;
+        margin-right: 10%;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .add-btn {
+        width: 50%;
+        padding: 1%;
+        border-radius: 10px;
+        background-color: rgb(45, 201, 149);
+        border: 2px solid rgb(9, 126, 87);;
+        color: aliceblue;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .add-btn:hover {
+        cursor: pointer;
+        background-color: rgb(111, 218, 182);
+        color: rgb(33, 138, 103);       
+    }
+}

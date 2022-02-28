@@ -1,0 +1,77 @@
+<form [formGroup]="formGroup" (submit)="onUpdate()" class="update-advertisement-form">
+    <h2><u>Update advertisement</u></h2>
+
+    <div class="form-items">
+        <div class="label-and-input">
+            <label>Title: </label>
+            <input 
+                type="text" 
+                id="title" 
+                formControlName="title"
+            >
+        </div>
+        <!-- Required error message -->
+        <small *ngIf="titleFormControl?.touched && titleFormControl?.invalid && titleFormControl.hasError('required')">
+            This field is required!!!
+        </small>
+    </div>
+    <hr>
+    
+    <div class="form-items">
+        <div class="label-and-input">
+            <label>Content: </label>
+            <textarea 
+                type="text"
+                id="content" 
+                formControlName="content"
+            ></textarea>
+        </div>
+        <!-- Required error message -->
+        <small *ngIf="contentFormControl?.touched && contentFormControl?.invalid && contentFormControl.hasError('required')">
+            This field is required!!!
+        </small>
+         <!-- Max length error message -->
+         <small *ngIf="contentFormControl?.touched && contentFormControl?.invalid && contentFormControl.hasError('maxlength')">
+            Maximum 1000 characters are allowed!!!
+        </small>
+    </div>
+    <hr>
+
+    <div class="form-items">
+        <div class="label-and-input">
+        <label>Type: </label>
+            <select 
+                id="type"
+                name="type"
+                formControlName="type"
+            >
+                <option *ngFor="let type of types" [value]="type">{{type}}</option>
+            </select>
+        </div>
+    </div>
+    <hr>
+
+    <div class="form-items">
+        <div class="label-and-input">
+        <label>Category: </label>
+            <select 
+                id="category"
+                name="category"
+                formControlName="category"
+            >
+                <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+            </select>
+        </div>
+    </div>
+    <hr>
+
+    <div class="form-items btn-container">
+        <button 
+            type="submit"
+            class="update-btn"
+        >
+            Add
+        </button>
+    </div>
+</form>
+

@@ -1,0 +1,12 @@
+<h1><u>Advertisements</u></h1>
+<div class="advertisements-container">
+    <div *ngIf="errorMesage">
+        {{errorMesage}}
+    </div>
+    <app-single-advertisement
+        *ngFor="let advertisement of advertisements"
+        [advertisement]="advertisement"
+        (likesChanged)="likesUpdate()"
+
+    ></app-single-advertisement>
+</div>
